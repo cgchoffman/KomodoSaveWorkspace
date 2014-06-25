@@ -1,0 +1,12 @@
+# #if MODE == "dev"
+content saveworkspace content/
+skin saveworkspace classic/1.0 skin/
+locale saveworkspace en-US locale/en-US/
+
+# #else
+content saveworkspace jar:saveworkspace.jar!/content/
+skin saveworkspace classic/1.0 jar:saveworkspace.jar!/skin/
+locale saveworkspace en-US jar:saveworkspace.jar!/locale/en-US/
+# #endif
+
+overlay chrome://browser/content/browser.xul chrome://saveworkspace/content/saveworkspace_overlay.xul

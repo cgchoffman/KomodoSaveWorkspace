@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+    <Description about="urn:mozilla:install-manifest">
+        <em:id>saveworkspace@thecoop.ca</em:id>
+        <em:name>saveworkspace</em:name>
+        <em:version>0.1</em:version>
+        <em:description>Save all currently open files to a *.workspace file any where on your machine.  Open a workspace at any point when you want to get quickly back to work.  Augments Project level workspace saving to include files not in a project.</em:description>
+        <em:creator>Carey Hoffman</em:creator>
+        <em:homepageURL>http://yourdomain.org/saveworkspace_extension</em:homepageURL>
+        <em:type>2</em:type> <!-- type=extension --> 
+
+        <em:targetApplication>
+           <!-- Firefox -->
+           <Description>
+                <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+                <em:minVersion>3.5</em:minVersion>
+                <!-- Since Firefox's numbering scheme is unpredictable, users
+                are encouraged to edit this field to the current max value.
+                -->
+                <em:maxVersion>999.0.*</em:maxVersion>
+           </Description>
+        </em:targetApplication>
+    </Description>
+</RDF>
