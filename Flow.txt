@@ -1,0 +1,24 @@
+Click on extension
+ - option to Save or Open Workspace
+ - GLOBAL set current spacefile name in extension namespace?
+  - allow to load when save again
+ - eventlistener on komodo shutdown to ask user to save workspace
+  if (ko.extensions.workspace.active)
+ if SAVE
+  *- get paths for all files currently open collectOpenViewPaths
+  *- place all paths in a list collectOpenViewPaths
+  *- open Save File dialog pickSpaceSavePath
+  - save contents of file in location chosen by user
+   - use *.komodospace extension
+ if OPEN
+  - open Open File dialog
+  - only show *.komodospace files
+   - user selects file
+  - load file
+  - parse contents and extract file paths
+  - ask user if they want to close all currently open files
+  if yes
+   - close all open files
+  - create editor object for each path and open them
+   
+ko.dialogs.yesNoCancel() check dis out.
