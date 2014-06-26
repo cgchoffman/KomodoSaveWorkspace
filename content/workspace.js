@@ -72,8 +72,8 @@ ko.extensions.workspace.saveWorkspace = function (){
  * Open a ko.filepicker to grab the workspace file the user wants to open
  * @returns {String} file path to workspace file
  */
-ko.extensions.workspace.pickSpaceFile = function (viewtype) {
-    var defaultDir;
+ko.extensions.workspace.pickSpaceFile = function () {
+    var defaultDir; 
     defaultDir = this.ko.extensions.workspace.getDefaultDir();
     var spaceFile = ko.filepicker.openFile(defaultDir,
                                            "MySpace.komodospace",
@@ -97,7 +97,8 @@ ko.extensions.workspace.getDefaultDir= function() {
     else if(koDoc){
         defaultDir = koDoc.file.dirName;
     }
-    return defaultDir;
+    return defaultDir; // XXX this needs to return the path to the parent, not the file
+                       // maybe 
 }
 
 
