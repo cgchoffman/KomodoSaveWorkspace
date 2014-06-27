@@ -2,16 +2,17 @@ Click on extension
  - option to Save or Open Workspace
  - GLOBAL set current spacefile name in extension namespace?
   - allow to load when save again
+  - set during open and save SAVE DONE
  - eventlistener on komodo shutdown to ask user to save workspace
   if (ko.extensions.workspace.active)
  if SAVE
   *- get paths for all files currently open collectOpenViewPaths
   *- place all paths in a list collectOpenViewPaths
   *- open Save File dialog pickSpaceSavePath
-  - save contents of file in location chosen by user
+  *- save contents of file in location chosen by user
    - use *.komodospace extension
  if OPEN
-  - open Open File dialog
+  *- open Open File dialog  PICKSPACEFILE
   - only show *.komodospace files
    - user selects file
   - load file
@@ -20,5 +21,10 @@ Click on extension
   if yes
    - close all open files
   - create editor object for each path and open them
+  
+  ISSEUS:
+  *- will open a second buffer if file exists - used ko.open.multipleURIs()
+  - complains that save file exists if you're resaving workspace
+  - remoave all alerts!!!
    
 ko.dialogs.yesNoCancel() check dis out.

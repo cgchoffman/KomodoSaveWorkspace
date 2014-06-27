@@ -6,8 +6,11 @@
          xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-  <commandset id="mainCommandSet">
-    <command id="Tasks:HelloWorld" oncommand="alert('Hello World from saveworkspace');"/>
+  <commandset id="saveWorkspace">
+    <command id="Tasks:SaveWorkSpace" oncommand="ko.extensions.workspace.save()"/>
+  </commandset>
+  <commandset id="loadWorkspace">
+    <command id="Tasks:LoadWorkspace" oncommand="ko.extensions.workspace.open()"/>
   </commandset>
 
   <menupopup id="menu_ToolsPopup">
